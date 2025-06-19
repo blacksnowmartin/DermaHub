@@ -49,4 +49,4 @@ Prompt:
 Flat-lay of personalized skincare product bottles and jars, labeled with user names, laid on a wooden shelf with soft towels and flowers around, calm color palette with earth tones
 
 
-By Justina and Martin
+
