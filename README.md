@@ -1,2 +1,2 @@
 # DermaHub
-Healthy skin and remedy platform.
+AI super agent for Healthy skin and remedy platform.
