@@ -1,4 +1,4 @@
-  / * General Styles */ body {
+/ * General Styles */ body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
@@ -120,6 +120,11 @@
       background-color: rgba(255, 255, 255, 0.1);
   }
 
+  .cta-buttons .btn:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+  }
+
   / * Skin Type Selection */ .skin-type-selection {
       text-align: center;
       padding: 50px 0;
@@ -150,8 +155,8 @@
   }
 
   .skin-type-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
   }
 
   .skin-type-card img {
