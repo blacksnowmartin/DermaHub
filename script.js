@@ -24,7 +24,7 @@ const navLinks = `
 <li><a href="#contact">Contact</a></li>
 `;
 
-document.querySelector('nav ul').innerHTML += navLinks;
+document.querySelector('nav ul').innerHTML = navLinks;
 
 function startQuiz() {
     alert("Quiz functionality coming soon!");

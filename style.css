@@ -1,280 +1,278 @@
-/ * General Styles */ body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f8f9fa;
-      color: #333;
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f4f8;
+    /* A soft, light blue-grey pastel */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #6a82fb;
+    /* A soft blue */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6a82fb;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    /* Soft blue gradient */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 0 0 50% 50% / 0 0 10% 10%;
+    /* Soft rounded bottom */
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-buttons .btn.primary {
+    background-color: #fff;
+    color: #6a82fb;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-buttons .btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-buttons .btn.secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cta-buttons .btn.secondary:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cta-buttons .btn:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Skin Type Selection */
+.skin-type-selection {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.skin-type-selection h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.skin-types {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skin-type-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 180px;
+    text-align: center;
+}
+
+.skin-type-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.skin-type-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #c2e9fb;
+}
+
+.skin-type-card h3 {
+    font-size: 20px;
+    color: #555;
+}
+
+/* AI Feature Highlight */
+.ai-feature {
+    background-color: #e0f7fa;
+    /* Light cyan */
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.ai-feature h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #00796b;
+    /* Dark teal */
+}
+
+.ai-features-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.ai-feature-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    width: 280px;
+    text-align: center;
+}
+
 .ai-feature-item img {
     width: 120px;
     height: 120px;
     margin-bottom: 20px;
 }
-.ai-feature-item img {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
+
+.ai-feature-item h3 {
+    font-size: 24px;
+    color: #00796b;
+    margin-bottom: 10px;
 }
-  }
 
-  .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-  }
+.ai-feature-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
 
-  / * Header */ header {
-      background-color: #fff;
-      padding: 15px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
+/* Community Section */
+.community-section {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f0f4c3;
+    /* Light yellow-green */
+    margin-top: 50px;
+}
 
-  header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
+.community-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #827717;
+    /* Darker yellow-green */
+}
 
-  .logo {
-      font-size: 28px;
-      font-weight: 700;
-      color: #6a82fb;
-      /* A soft blue */
-  }
+.community-section img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #dce775;
+}
 
-  nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-  }
+.community-section p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-  nav ul li {
-      margin-left: 30px;
-  }
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
 
-  nav ul li a {
-      text-decoration: none;
-      color: #555;
-      font-weight: 600;
-      transition: color 0.3s ease;
-  }
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
 
-  nav ul li a:hover {
-      color: #6a82fb;
-  }
+.footer-links a:hover {
+    color: #6a82fb;
+}
 
-  / * Hero Section */ .hero {
-      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
-      /* Soft blue gradient */
-      color: #fff;
-      text-align: center;
-      padding: 100px 20px;
-      border-radius: 0 0 50% 50% / 0 0 10% 10%;
-      /* Soft rounded bottom */
-      margin-bottom: 50px;
-  }
-
-  .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      font-weight: 700;
-      line-height: 1.2;
-  }
-
-  .hero p {
-      font-size: 22px;
-      margin-bottom: 40px;
-      opacity: 0.9;
-  }
-
-  .cta-buttons .btn {
-      display: inline-block;
-      padding: 15px 35px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .cta-buttons .btn.primary {
-      background-color: #fff;
-      color: #6a82fb;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .cta-buttons .btn.primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .cta-buttons .btn.secondary {
-      background-color: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-  }
-
-  .cta-buttons .btn.secondary:hover {
-      transform: translateY(-3px);
-      background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .cta-buttons .btn:hover {
-      transform: translateY(-5px);
-      transition: transform 0.3s ease;
-  }
-
-  / * Skin Type Selection */ .skin-type-selection {
-      text-align: center;
-      padding: 50px 0;
-  }
-
-  .skin-type-selection h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      color: #444;
-  }
-
-  .skin-types {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-  }
-
-  .skin-type-card {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      width: 180px;
-      text-align: center;
-  }
-
-  .skin-type-card:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
-  }
-
-  .skin-type-card img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 15px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #c2e9fb;
-  }
-
-  .skin-type-card h3 {
-      font-size: 20px;
-      color: #555;
-  }
-
-  / * AI Feature Highlight */ .ai-feature {
-      background-color: #e0f7fa;
-      /* Light cyan */
-      padding: 80px 0;
-      text-align: center;
-      margin-top: 50px;
-  }
-
-  .ai-feature h2 {
-      font-size: 36px;
-      margin-bottom: 50px;
-      color: #00796b;
-      /* Dark teal */
-  }
-
-  .ai-features-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-  }
-
-  .ai-feature-item {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      width: 280px;
-      text-align: center;
-  }
-
-  .ai-feature-item img {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 20px;
-  }
-
-  .ai-feature-item h3 {
-      font-size: 24px;
-      color: #00796b;
-      margin-bottom: 10px;
-  }
-
-  .ai-feature-item p {
-      font-size: 16px;
-      color: #666;
-      line-height: 1.6;
-  }
-
-  / * Community Section */ .community-section {
-      text-align: center;
-      padding: 80px 0;
-      background-color: #f0f4c3;
-      /* Light yellow-green */
-      margin-top: 50px;
-  }
-
-  .community-section h2 {
-      font-size: 36px;
-      margin-bottom: 30px;
-      color: #827717;
-      /* Darker yellow-green */
-  }
-
-  .community-section img {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 25px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #dce775;
-  }
-
-  .community-section p {
-      font-size: 18px;
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto;
-  }
-
-  / * Footer */ footer {
-      background-color: #333;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
-      margin-top: 50px;
-  }
-
-  .footer-links a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 15px;
-      transition: color 0.3s ease;
-  }
-
-  .footer-links a:hover {
-      color: #6a82fb;
-  }
-
-  footer p {
-      margin-top: 20px;
-      font-size: 14px;
-      opacity: 0.8;
-  }
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
