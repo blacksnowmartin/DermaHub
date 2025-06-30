@@ -100,28 +100,36 @@
             <h2>Frequently Asked Questions</h2>
             <div class="faq-items">
                 <div class="faq-item">
-                    <h3>What is Derma Hub?</h3>
-                    <p>Derma Hub is an AI-powered platform that provides personalized skincare recommendations based on
-                        your unique skin type and concerns.</p>
+                    <h3 class="faq-question">What is Derma Hub?</h3>
+                    <p class="faq-answer">Derma Hub is an AI-powered platform that provides personalized skincare recommendations based on your unique skin type and concerns.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>How does the AI analysis work?</h3>
-                    <p>Our AI uses advanced algorithms to analyze your skin's characteristics from uploaded images,
-                        helping to identify your skin type and specific needs.</p>
+                    <h3 class="faq-question">How does the AI analysis work?</h3>
+                    <p class="faq-answer">Our AI uses advanced algorithms to analyze your skin's characteristics from uploaded images, helping to identify your skin type and specific needs.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Are the product recommendations unbiased?</h3>
-                    <p>Yes, our recommendations are based purely on your skin's needs and scientific data, not on brand
-                        partnerships or promotions.</p>
+                    <h3 class="faq-question">Are the product recommendations unbiased?</h3>
+                    <p class="faq-answer">Yes, our recommendations are based purely on your skin's needs and scientific data, not on brand partnerships or promotions.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Can I track my skin's progress over time?</h3>
-                    <p>Absolutely! Derma Hub allows you to log your routine and track changes in your skin, helping you
-                        see the effectiveness of your personalized regimen.</p>
+                    <h3 class="faq-question">Can I track my skin's progress over time?</h3>
+                    <p class="faq-answer">Absolutely! Derma Hub allows you to log your routine and track changes in your skin, helping you see the effectiveness of your personalized regimen.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
 
     <footer>
         <div class="container">
