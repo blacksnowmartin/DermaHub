@@ -54,12 +54,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6a82fb;
+    color: #9be936;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    background: linear-gradient(to right, #c2a239, #c2a239);
     /* Soft blue gradient */
     color: #fff;
     text-align: center;
