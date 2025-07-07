@@ -19,7 +19,7 @@ class DermaHubApp:
         images = []
         for path in image_paths:
             try:
-                img = Image.open(path)
+            img = img.resize((200, 200), Image.Resampling.LANCZOS)
                 img = img.resize((200, 200), Image.ANTIALIAS)
                 images.append(ImageTk.PhotoImage(img))
             except Exception as e:
