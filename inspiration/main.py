@@ -8,6 +8,7 @@ class DermaHubApp:
         self.root = root
         self.root.title("DermaHub - Skin Care App")
         self.images = self.load_images()
+        self.labels = []  # Store references to labels
         self.display_images()
 
     def load_images(self):
@@ -30,6 +31,7 @@ class DermaHubApp:
         for index, img in enumerate(self.images):
             label = tk.Label(self.root, image=img)
             label.grid(row=index // 4, column=index % 4)
+            self.labels.append(label)  # Save the label reference
 
 if __name__ == "__main__":
     root = tk.Tk()
