@@ -9,13 +9,15 @@ class DermaHubApp:
         self.root.title("DermaHub - Skin Care App")
         self.images = self.load_images()
         self.labels = []  # Store references to labels
+        self.num_columns = 4  # Configurable number of columns
         self.display_images()
 
-    def load_images(self):
-        image_paths = [
-            "image1.jpg", "image2.jpg", "image3.jpg", 
-            "image4.jpg", "image5.jpg", "image6.jpg", 
-            "image7.jpg", "image8.jpg"
+        try:
+            with open("image_paths.txt", "r") as file:
+                image_paths = [line.strip() for line in file if line.strip()]
+        except FileNotFoundError:
+            print("Error: 'image_paths.txt' not found. Please provide the file with image paths.")
+            image_paths = []
         ]
         images = []
         for path in image_paths:
@@ -29,7 +31,7 @@ class DermaHubApp:
 
     def display_images(self):
         for index, img in enumerate(self.images):
-            label = tk.Label(self.root, image=img)
+            label.grid(row=index // self.num_columns, column=index % self.num_columns)
             label.grid(row=index // 4, column=index % 4)
             self.labels.append(label)  # Save the label reference
 
