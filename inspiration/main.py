@@ -18,9 +18,12 @@ class DermaHubApp:
         ]
         images = []
         for path in image_paths:
-            img = Image.open(path)
-            img = img.resize((200, 200), Image.ANTIALIAS)
-            images.append(ImageTk.PhotoImage(img))
+            try:
+                img = Image.open(path)
+                img = img.resize((200, 200), Image.ANTIALIAS)
+                images.append(ImageTk.PhotoImage(img))
+            except Exception as e:
+                print(f"Error loading image {path}: {e}")
         return images
 
     def display_images(self):
