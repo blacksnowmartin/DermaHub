@@ -6,3 +6,12 @@ Command to ensure the script is running:
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 ```
+
+## Installation
+
+npm install -g dermahub
+
+## Usage 
+```bash
+dermahub
+```
