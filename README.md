@@ -15,3 +15,11 @@ npm install -g dermahub
 ```bash
 dermahub
 ```
+
+
+styling 
+about us 
+ongezea content
+adding images 2 articles rem
+
+ 
